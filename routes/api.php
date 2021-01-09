@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/upload-photo', 'Api\PhotoController@upload');
 Route::get('/all-photos', 'Api\PhotoController@getPhotos');
+Route::post('/delete', 'Api\PhotoController@delete');

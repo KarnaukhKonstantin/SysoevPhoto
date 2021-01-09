@@ -39,7 +39,7 @@ export default {
             $('#gallery').modal('show');
         },
         loadPhotos() {
-            axios.get('/api/all-photos')
+            axios.get('/api/all-photos?perPage=30')
                 .then(response => {
                     this.photos = response.data
                 })

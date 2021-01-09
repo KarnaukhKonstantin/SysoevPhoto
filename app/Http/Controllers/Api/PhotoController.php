@@ -14,7 +14,7 @@ class PhotoController extends Controller
         $storePhotos = [];
 
         foreach ($request->items as $file) {
-            $name = $file->getClientOriginalName();
+            $name = time() .'_'. $file->getClientOriginalName();
             $destinationPath = storage_path('app/public/photos/');
             $file->move($destinationPath, $name);
             $files[] = $destinationPath . $name;
@@ -33,9 +33,37 @@ class PhotoController extends Controller
         Gallery::insert($inputs);
     }
 
-    public function getPhotos()
+    public function getPhotos(Request $request)
     {
-        $photos = Gallery::all();
-        return response()->json($photos);
+        $perPage = $request->perPage ?? 10;
+        $offset = $request->offset ?? 0;
+        $count = Gallery::count();
+        $photos = Gallery::orderBy('id', 'desc')->take($perPage)->offset($offset)->get();
+
+        return response()->json(compact('photos', 'count'));
+    }
+
+    public function delete(Request $request)
+    {
+        $removeData = $request->all();
+        $removeIds = [];
+        $removeLinks = [];
+
+        if (!empty($removeData)) {
+            foreach ($removeData as $photo) {
+                $removeIds[] = $photo['id'];
+                $removeLinks[] = $photo['link'];
+            }
+
+            Gallery::whereIn('id', $removeIds)->delete();
+
+            foreach ($removeLinks as $link) {
+                if (is_file($link)) {
+                    unlink($link);
+                }
+            }
+        }
+
+        return response()->json('Photos were deleted successfully!');
     }
 }
