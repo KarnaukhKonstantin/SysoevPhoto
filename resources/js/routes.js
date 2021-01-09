@@ -24,6 +24,11 @@ let routes = [
         name: 'portfolio',
     },
     {
+        path: '/price',
+        component: require('./components/partials/PriceList.vue').default,
+        name: 'price',
+    },
+    {
         path: '/contacts',
         component: require('./components/pages/ContactPage.vue').default,
         name: 'contacts',

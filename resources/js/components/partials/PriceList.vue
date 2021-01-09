@@ -1,12 +1,43 @@
 <template>
     <transition appear name="fade" :duration="10000">
-        <div class="container-fluid price text-center">
-            <div class="row align-items-center justify-content-center d-flex flex-column">
-                <h1>Price List</h1>
-
-                <h4>Family: 300$</h4>
-                <h4>Love Story: 500$</h4>
-                <h4>Wedding: 1000$</h4>
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="row px-3 d-flex flex-column title title--top">
+                    <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
+                        Price List
+                    </h1>
+                    <div class="border b-1">
+                        <span></span>
+                    </div>
+                    <div class="border b-2">
+                        <span></span>
+                    </div>
+                    <div class="business-title pt-3">
+                        <h3>Actual basic price /</h3>
+                        <h3>2021</h3>
+                    </div>
+                </div>
+            </div>
+            <!--            <div class="col-md-4 px-5 main-block"></div>-->
+            <div class="col-md-8 px-5 main-block services">
+                <div class="row align-items-center text-grey">
+                    <div class="col-md-4 offset-md-2 my-1 pr-3 text-right wedding-price">
+                        <h3>Wedding</h3>
+                        <h1>300$</h1>
+                    </div>
+                    <div class="col-md-4 my-1 ml-2 pl-3 text-left family-price">
+                        <h3>Family</h3>
+                        <h1>100$</h1>
+                    </div>
+                    <div class="col-md-4 offset-md-2 my-1 pr-3 text-right story-price">
+                        <h3>Story</h3>
+                        <h1>150$</h1>
+                    </div>
+                    <div class="col-md-4 my-1 ml-2 pl-3 text-left studio-price">
+                        <h3>Studio</h3>
+                        <h1>200$</h1>
+                    </div>
+                </div>
             </div>
         </div>
     </transition>
@@ -23,3 +54,25 @@ export default {
     }
 }
 </script>
+<style>
+.wedding-price, .family-price, .story-price, .studio-price {
+    height: 205px;
+    padding-top: 60px;
+}
+.family-price {
+    border-left: 1px solid #484848;
+    border-bottom: 1px solid #484848;
+}
+.wedding-price {
+    border-right: 1px solid #484848;
+    border-bottom: 1px solid #484848;
+}
+.story-price {
+    border-right: 1px solid #484848;
+    border-top: 1px solid #484848;
+}
+.studio-price {
+    border-left: 1px solid #484848;
+    border-top: 1px solid #484848;
+}
+</style>

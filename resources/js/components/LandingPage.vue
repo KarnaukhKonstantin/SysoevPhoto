@@ -1,26 +1,7 @@
 <template>
     <section>
-        <div class="row justify-content-between align-items-center mx-3 mt-3">
+        <div class="row justify-content-between align-items-center mx-4 mt-4">
             <h6 class="name">Stanislav Sysoev</h6>
-
-<!--            <transition name="fade">-->
-<!--                <div class="row menu t" v-if="showMenu">-->
-<!--                    <span class="mx-1" @click="[showGallery = true, showPriceList = false]">Портфолио</span>-->
-<!--                    <span class="mx-1" @click="showPrice()">Цены</span>-->
-<!--                    <span class="mx-1">Контакты</span>-->
-<!--                </div>-->
-<!--            </transition>-->
-            <div>
-                <div class="row justify-content-left align-items-center mx-3">
-                    <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook mr-2"></i></a>
-                    <a href=""><i class="fa fa-youtube mr-2"></i></a>
-                    <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram mr-2"></i></a>
-                    <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram mr-2"></i></a>
-<!--                    <button class="btn btn-menu ml-3" type="button" @click="openMenu()">-->
-<!--                        <i class="fa fa-th"></i>-->
-<!--                    </button>-->
-                </div>
-            </div>
         </div>
 
         <gallery v-if="showGallery"></gallery>
@@ -29,7 +10,24 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-1">
-                    <div class="row d-flex flex-column align-items-start justify-content-start sidebar pl-5">
+                    <div class="row d-flex flex-column align-items-start justify-content-start social-sidebar pl-3">
+                        <div>
+                            <div class="row justify-content-left align-items-center mx-3">
+                                <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook mr-2"></i></a>
+                                <a href=""><i class="fa fa-youtube mr-2"></i></a>
+                                <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram mr-2"></i></a>
+                                <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram mr-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <router-view></router-view>
+                </div>
+
+                <div class="col-md-1">
+                    <div class="row d-flex flex-column align-items-end justify-content-end sidebar pr-5">
                         <ul>
                             <router-link class="d-block" :to="{ name: 'main'}" tag="a">
                                 <li class="line-main">Main</li>
@@ -51,17 +49,17 @@
                             </router-link>
                         </ul>
                         <ul>
+                            <router-link class="d-block" :to="{ name: 'price'}" tag="a">
+                                <li class="line-price">Price-list</li>
+                            </router-link>
+                        </ul>
+                        <ul>
                             <router-link class="d-block" :to="{ name: 'contacts'}" tag="a">
                                 <li class="line-contacts">Contacts</li>
                             </router-link>
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-md-11">
-                    <router-view></router-view>
-                </div>
-
             </div>
         </div>
     </section>
@@ -133,8 +131,11 @@ i {
     color: #fff;
 }
 
-.sidebar {
-    margin-top: 550%;
+.social-sidebar {
+   margin-top: 85vh;
+}
+.sidebar a {
+    color: #ffffff !important;
 }
 
 ul {
@@ -148,7 +149,7 @@ li {
 li:after {
     content: "";
     position: absolute;
-    left:0;
+    right: 0;
     top: 100%;
     width: 20px;
     height: 2px;
@@ -161,7 +162,7 @@ li:after {
 .line-about:hover:after {
     width: 55px;
 }
-.line-services:hover:after, .line-contacts:hover:after {
+.line-services:hover:after, .line-contacts:hover:after, .line-price:hover:after {
     width: 80px;
 }
 
