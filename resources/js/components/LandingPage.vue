@@ -33,11 +33,11 @@
                                 <li class="line-main">Main</li>
                             </router-link>
                         </ul>
-                        <ul>
-                            <router-link class="d-block" :to="{ name: 'about'}" tag="a">
-                                <li class="line-about">About</li>
-                            </router-link>
-                        </ul>
+<!--                        <ul>-->
+<!--                            <router-link class="d-block" :to="{ name: 'about'}" tag="a">-->
+<!--                                <li class="line-about">About</li>-->
+<!--                            </router-link>-->
+<!--                        </ul>-->
                         <ul>
                             <router-link class="d-block" :to="{ name: 'services'}" tag="a">
                                 <li class="line-services">Services</li>

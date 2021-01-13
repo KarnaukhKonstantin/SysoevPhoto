@@ -18,12 +18,13 @@
             </div>
             <div class="col-md-10 px-2">
                 <section class="admin-panel">
-                    <multiple-file-uploader postURL="/api/upload-photo"
-                                            successMessagePath="Uploaded!!"
-                                            dropAreaPrimaryMessage="Download Here!"
-                                            errorMessagePath=""
-                                            fileUploadErrorMessage="ERROR">
-                    </multiple-file-uploader>
+                    <button class="btn btn-success" @click="check">check</button>
+<!--                    <multiple-file-uploader postURL="/api/upload-photo"-->
+<!--                                            successMessagePath="Uploaded!!"-->
+<!--                                            dropAreaPrimaryMessage="Download Here!"-->
+<!--                                            errorMessagePath=""-->
+<!--                                            fileUploadErrorMessage="ERROR">-->
+<!--                    </multiple-file-uploader>-->
                 </section>
                 <section class="admin-panel" style="overflow-y: scroll; overflow-x: hidden">
                     <div class="row align-items-center px-3">
@@ -57,7 +58,8 @@ export default {
             offset: 0,
             selectedItems: [],
             forRemove: [],
-            removeIndexes: []
+            removeIndexes: [],
+            new: []
         }
     },
     mounted() {
@@ -70,6 +72,9 @@ export default {
             this.photos = [];
             this.countPhotos = 0;
             this.offset = 0;
+        },
+        check() {
+          console.log(this.new);
         },
         loadPhotos() {
             axios.get('/api/all-photos?perPage=10&offset=' + this.offset)

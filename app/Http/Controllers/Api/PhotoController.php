@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Gallery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\Exception\NotReadableException;
 
 class PhotoController extends Controller
 {
@@ -16,7 +18,14 @@ class PhotoController extends Controller
         foreach ($request->items as $file) {
             $name = time() .'_'. $file->getClientOriginalName();
             $destinationPath = storage_path('app/public/photos/');
-            $file->move($destinationPath, $name);
+dd(file_get_contents($_FILES[$file]['tmp_name']));
+            dd($file->getClientOriginalName());
+            $file = Image::make($file);
+            $file = Image::make($file->getRealPath())->resize(1000, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->encode('webp', 90);
+
+            $file->save($destinationPath, $name);
             $files[] = $destinationPath . $name;
             $storePhotos[] = [
                 'name' => $name,

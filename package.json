@@ -24,12 +24,13 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "vue-upload": "https://github.com/KarnaukhKonstantin/vue2-multi-uploader.git",
         "rumuslog": "^1.0.1",
+        "vue-loading-overlay": "^3.4.2",
         "vue-router": "^3.0.2",
         "vue-scroll-reveal": "^1.0.8",
         "vue-select": "^2.4.0",
         "vue-swal": "0.0.6",
+        "vue-upload": "https://github.com/KarnaukhKonstantin/vue2-multi-uploader.git",
         "vue2-dropzone": "^3.2.2",
         "vue2-editor": "^2.6.6",
         "vuelidate": "^0.7.4",
