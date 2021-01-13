@@ -18,13 +18,12 @@
             </div>
             <div class="col-md-10 px-2">
                 <section class="admin-panel">
-                    <button class="btn btn-success" @click="check">check</button>
-<!--                    <multiple-file-uploader postURL="/api/upload-photo"-->
-<!--                                            successMessagePath="Uploaded!!"-->
-<!--                                            dropAreaPrimaryMessage="Download Here!"-->
-<!--                                            errorMessagePath=""-->
-<!--                                            fileUploadErrorMessage="ERROR">-->
-<!--                    </multiple-file-uploader>-->
+                    <multiple-file-uploader postURL="/api/upload-photo"
+                                            successMessagePath="Uploaded!!"
+                                            dropAreaPrimaryMessage="Download Here!"
+                                            errorMessagePath=""
+                                            fileUploadErrorMessage="ERROR">
+                    </multiple-file-uploader>
                 </section>
                 <section class="admin-panel" style="overflow-y: scroll; overflow-x: hidden">
                     <div class="row align-items-center px-3">

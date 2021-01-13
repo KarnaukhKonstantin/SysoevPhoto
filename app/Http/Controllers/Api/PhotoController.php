@@ -16,16 +16,16 @@ class PhotoController extends Controller
         $storePhotos = [];
 
         foreach ($request->items as $file) {
+
             $name = time() .'_'. $file->getClientOriginalName();
+            $name = str_replace([' ', '-', ','], '_', $name);
             $destinationPath = storage_path('app/public/photos/');
-dd(file_get_contents($_FILES[$file]['tmp_name']));
-            dd($file->getClientOriginalName());
-            $file = Image::make($file);
+
             $file = Image::make($file->getRealPath())->resize(1000, null, function ($constraint) {
                 $constraint->aspectRatio();
-            })->encode('webp', 90);
+            });
 
-            $file->save($destinationPath, $name);
+            $file->save($destinationPath.$name, 90);
             $files[] = $destinationPath . $name;
             $storePhotos[] = [
                 'name' => $name,
