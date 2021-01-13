@@ -1,12 +1,7 @@
 <template>
     <transition appear name="fade" :duration="10000">
         <div class="container-fluid">
-<!--            <loading :active.sync="isLoading"-->
-<!--                     :can-cancel="true"-->
-<!--                     :on-cancel="onCancel"-->
-<!--                     :loader="'dots'"-->
-<!--                     :is-full-page="fullPage"></loading>-->
-
+            
             <div class="row py-3 align-items-center mx-0 gallery" v-if="photos.length > 0" @scroll="listScroll">
                 <div class="col-md-3 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
                     <img :src="photo.link" class="img-fluid" style="height: 250px; object-fit: contain" @click="showFullSize(photo.link)">
@@ -33,12 +28,7 @@
 </template>
 <script>
 
-import Loading from 'vue-loading-overlay';
-
 export default {
-    components: {
-        Loading
-    },
     data () {
         return {
             fullImageSource: '',
