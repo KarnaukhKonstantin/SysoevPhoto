@@ -1,8 +1,8 @@
 <template>
     <transition appear name="fade" :duration="10000">
         <div class="container-fluid">
-            
-            <div class="row py-3 align-items-center mx-0 gallery" v-if="photos.length > 0" @scroll="listScroll">
+
+            <div class="row py-3 mx-0 gallery" v-if="photos.length > 0" @scroll="listScroll">
                 <div class="col-md-3 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
                     <img :src="photo.link" class="img-fluid" style="height: 250px; object-fit: contain" @click="showFullSize(photo.link)">
                 </div>
@@ -76,21 +76,3 @@ export default {
     }
 }
 </script>
-<style>
-/* width */
-::-webkit-scrollbar {
-    width: 7px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 20px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #7a3f3e;
-    border-radius: 20px;
-}
-</style>

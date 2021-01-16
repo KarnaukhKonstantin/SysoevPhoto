@@ -1,43 +1,68 @@
 <template>
-    <section>
+    <section class="landing-content">
         <div class="row justify-content-between align-items-center mx-4 mt-4">
             <h6 class="name">Stanislav Sysoev</h6>
         </div>
 
-        <gallery v-if="showGallery"></gallery>
-        <price-list v-if="showPriceList"></price-list>
-
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-md-1">
-                    <div class="row d-flex flex-column align-items-start justify-content-start social-sidebar pl-3">
-                        <div>
-                            <div class="row justify-content-left align-items-center mx-3">
-                                <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook mr-2"></i></a>
-                                <a href=""><i class="fa fa-youtube mr-2"></i></a>
-                                <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram mr-2"></i></a>
-                                <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram mr-2"></i></a>
+        <div class="container-fluid p-0 m-0 ">
+            <div class="row mobile-sidebar p-0 m-0">
+                <div class="col-md-12 text-right p-0 m-0">
+                    <button type="button" class="btn btn-outline-light mt-3 mx-3" @click="openMobMenu()">
+                        <i class="fa fa-th-large"></i>
+                    </button>
+                    <div class="row mobile-router p-0 m-0 modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="mob-router">
+                        <div class="modal-dialog modal-dialog modal-xl" role="document">
+                            <button type="button" class="btn btn-outline-secondary mt-4" data-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="modal-content mobile-menu">
+                                <router-link class="d-block" :to="{ name: 'main'}" tag="a" data-dismiss="modal">
+                                    <li>Main</li>
+                                </router-link>
+                                <router-link class="d-block" :to="{ name: 'services'}" tag="a" data-dismiss="modal">
+                                    <li>Services</li>
+                                </router-link>
+                                <router-link class="d-block" :to="{ name: 'portfolio'}" tag="a" data-dismiss="modal">
+                                    <li>Portfolio</li>
+                                </router-link>
+                                <router-link class="d-block" :to="{ name: 'price'}" tag="a" data-dismiss="modal">
+                                    <li>Price-list</li>
+                                </router-link>
+                                <router-link class="d-block" :to="{ name: 'contacts'}" tag="a" data-dismiss="modal">
+                                    <li>Contacts</li>
+                                </router-link>
+                                <div class="row justify-content-center align-items-end mt-40vh">
+                                    <img src="assets/images/sysoev-logo.png" class="img-thumbnail" width="100">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <div class="col-md-10">
+        <div class="container-fluid">
+            <div class="row row-rotate">
+                <div class="col-sm-12 col-md-1">
+                    <div class="row social-sidebar">
+                        <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook mr-2"></i></a>
+                        <a href=""><i class="fa fa-youtube mr-2"></i></a>
+                        <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram mr-2"></i></a>
+                        <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram mr-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-10">
                     <router-view></router-view>
                 </div>
 
-                <div class="col-md-1">
-                    <div class="row d-flex flex-column align-items-end justify-content-end sidebar pr-5">
+                <div class="col-sm-12 col-md-1">
+                    <div class="row navigate-sidebar pr-5">
                         <ul>
                             <router-link class="d-block" :to="{ name: 'main'}" tag="a">
                                 <li class="line-main">Main</li>
                             </router-link>
                         </ul>
-<!--                        <ul>-->
-<!--                            <router-link class="d-block" :to="{ name: 'about'}" tag="a">-->
-<!--                                <li class="line-about">About</li>-->
-<!--                            </router-link>-->
-<!--                        </ul>-->
                         <ul>
                             <router-link class="d-block" :to="{ name: 'services'}" tag="a">
                                 <li class="line-services">Services</li>
@@ -68,9 +93,6 @@
 export default {
     data() {
         return {
-            showMenu: false,
-            showGallery: false,
-            showPriceList: false,
             fullImageSource: '',
         }
     },
@@ -78,114 +100,12 @@ export default {
         //
     },
     methods: {
-        showPage(item) {
-            // this.$refs.fullpage.$fullpage.moveNext();
+        openMobMenu() {
+            $('#mob-router').modal('show');
         },
-        moveNext() {
-            this.$refs.example.$fullpage.moveNext(); //Move to the next page
-        },
-        openMenu() {
-            Bus.$emit('open-menu');
-            this.showPriceList = false;
-            this.showMenu = !this.showMenu;
-            this.showGallery = this.showMenu ? this.showGallery = true : this.showGallery = false;
-            this.$root.check();
-        },
-        showPrice() {
-            this.showGallery = false;
-            this.showPriceList = true;
+        hideMobMenu() {
+            $('#mob-router').modal('hide');
         }
     }
 }
 </script>
-<style type="text/css">
-.name {
-    font-size: 2.0rem;
-    letter-spacing: 0.1em;
-    position: relative;
-    z-index: 1000;
-}
-.page-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-.fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
-    opacity: 0;
-}
-a {
-    text-decoration: none;
-    color: #fff !important;
-    font-size: 20px;
-}
-a :hover {
-    text-decoration: none;
-    color: #fff !important;
-}
-i {
-    color: #fff;
-}
-
-.social-sidebar {
-   margin-top: 85vh;
-}
-.sidebar a {
-    color: #ffffff !important;
-}
-
-ul {
-    padding: 0;
-    cursor: pointer;
-}
-li {
-    position: relative;
-    display: inline-block;
-}
-li:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 100%;
-    width: 20px;
-    height: 2px;
-    background-color: #7a3f3e;
-    transition: width .3s ease-in-out;
-}
-.line-main:hover:after {
-    width: 45px;
-}
-.line-about:hover:after {
-    width: 55px;
-}
-.line-services:hover:after, .line-contacts:hover:after, .line-price:hover:after {
-    width: 80px;
-}
-
-/*#scroll-down{*/
-/*    transform: rotate(90deg);*/
-/*    margin-top: 200%*/
-/*}*/
-/*#scroll-line {*/
-/*    transform: rotate(90deg);*/
-/*    margin-top: 20px;*/
-/*}*/
-#scroll-line p {
-    position: relative;
-    display: inline-block;
-}
-#scroll-line p:after {
-    content: "";
-    position: absolute;
-    left:0;
-    top: 100%;
-    height: 5px;
-    background-color: #7a3f3e;
-    width: 100px;
-    transition: width .3s ease-in-out;
-}
-</style>

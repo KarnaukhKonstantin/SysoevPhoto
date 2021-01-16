@@ -2,7 +2,7 @@
     <transition appear name="fade" :duration="10000">
         <div class="row pt-5">
             <div class="col-md-4">
-                <div class="row px-3 d-flex flex-column title title--top">
+                <div class="row px-3 title title--top">
                     <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
                         My Services
                     </h1>
@@ -50,9 +50,3 @@ export default {
     }
 }
 </script>
-<style>
-.services {
-    background-color: rgba(255,255,255,0.5);
-    padding-top: 8%;
-}
-</style>

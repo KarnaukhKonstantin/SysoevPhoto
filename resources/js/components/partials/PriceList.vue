@@ -2,7 +2,7 @@
     <transition appear name="fade" :duration="10000">
         <div class="row pt-5">
             <div class="col-md-4">
-                <div class="row px-3 d-flex flex-column title title--top">
+                <div class="row px-3 title title--top">
                     <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
                         Price List
                     </h1>
@@ -20,7 +20,7 @@
             </div>
             <!--            <div class="col-md-4 px-5 main-block"></div>-->
             <div class="col-md-8 px-5 main-block services">
-                <div class="row align-items-center text-grey">
+                <div class="row text-grey">
                     <div class="col-md-4 offset-md-2 my-1 pr-3 text-right wedding-price">
                         <h3>Wedding</h3>
                         <h1>300$</h1>
@@ -54,25 +54,3 @@ export default {
     }
 }
 </script>
-<style>
-.wedding-price, .family-price, .story-price, .studio-price {
-    height: 205px;
-    padding-top: 60px;
-}
-.family-price {
-    border-left: 1px solid #484848;
-    border-bottom: 1px solid #484848;
-}
-.wedding-price {
-    border-right: 1px solid #484848;
-    border-bottom: 1px solid #484848;
-}
-.story-price {
-    border-right: 1px solid #484848;
-    border-top: 1px solid #484848;
-}
-.studio-price {
-    border-left: 1px solid #484848;
-    border-top: 1px solid #484848;
-}
-</style>
