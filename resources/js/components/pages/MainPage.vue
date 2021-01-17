@@ -1,6 +1,6 @@
 <template>
     <transition appear name="fade" :duration="10000">
-        <div class="row pt-5">
+        <div class="row pt-5 site">
             <div class="col-md-4">
                 <div class="row px-3 title title--top">
                     <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
@@ -18,9 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 px-5 main-block">
-
-            </div>
+            <div class="col-md-8 px-5 main-block"></div>
         </div>
     </transition>
 </template>

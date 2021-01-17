@@ -42,10 +42,12 @@ Vue.use(rumuslog);
 
 Vue.component('landing-page', require('./components/LandingPage.vue').default);
 Vue.component('admin-page', require('./components/AdminPage.vue').default);
+Vue.component('mobile-view', require('./components/MobileView.vue').default);
 
 Vue.component('admin-header', require('./components/partials/AdminHeader.vue').default);
 Vue.component('admin-sidebar', require('./components/partials/AdminSidebar.vue').default);
 Vue.component('uploader-page', require('./components/partials/Uploader.vue').default);
+
 
 Vue.component('navigate-page', require('./components/partials/Navigate.vue').default);
 Vue.component('footer-page', require('./components/partials/Footer.vue').default);
