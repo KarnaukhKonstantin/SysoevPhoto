@@ -14,19 +14,12 @@
                             <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-main-page')">
                                 <li>Main</li>
                             </a>
-<!--                            <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-services')">-->
-<!--                                <li>Services</li>-->
-<!--                            </a>-->
                             <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-portfolio')">
                                 <li>Portfolio</li>
                             </a>
-<!--                            <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-price')">-->
-<!--                                <li>Price-list</li>-->
-<!--                            </a>-->
                             <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-contacts')">
                                 <li>Contacts</li>
                             </a>
-
                             <div class="row justify-content-center align-items-end mt-30vh">
                                 <img src="assets/images/sysoev-logo.png" class="img-thumbnail" width="100">
                             </div>
@@ -55,39 +48,18 @@
                 </h6>
             </div>
         </div>
-<!--        <div class="row mobile-services" id="mobile-services">-->
-<!--            <div class="col-sm-12">-->
-<!--                <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">-->
-<!--                    My Services-->
-<!--                </h1>-->
-<!--            </div>-->
-<!--            <div class="col-sm-12">-->
-<!--                <h6>photographer /</h6>-->
-<!--                <h6>happy maker.</h6>-->
-<!--            </div>-->
-<!--        </div>-->
         <div class="row mobile-portfolio" id="mobile-portfolio">
             <div class="col-sm-12">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
-                    Portfolio
+                    Moments
                 </h1>
             </div>
-            <div class="col-sm-12">
-                <h6>photographer /</h6>
-                <h6>happy maker.</h6>
+            <div class="row py-3 mx-0 mobile-gallery" v-if="photos.length > 0" @scroll="listScroll">
+                <div class="col-md-3 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
+                    <img :src="photo.link" class="img-fluid" style="height: 250px; object-fit: contain">
+                </div>
             </div>
         </div>
-<!--        <div class="row mobile-price" id="mobile-price">-->
-<!--            <div class="col-sm-12">-->
-<!--                <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">-->
-<!--                    Price List-->
-<!--                </h1>-->
-<!--            </div>-->
-<!--            <div class="col-sm-12">-->
-<!--                <h6>photographer /</h6>-->
-<!--                <h6>happy maker.</h6>-->
-<!--            </div>-->
-<!--        </div>-->
         <div class="row mobile-contacts" id="mobile-contacts">
             <div class="col-sm-12">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
@@ -135,11 +107,16 @@
 export default {
     data() {
         return {
-
+            photos: [],
+            isLoading: false,
+            fullPage: true,
+            page: 1,
+            offset: 0,
+            elem: '',
         }
     },
     mounted() {
-        //
+        this.elem = document.getElementsByClassName('mobile-gallery');
     },
     methods: {
         openMobMenu() {
@@ -151,7 +128,32 @@ export default {
         moveToScroll(targetBlock) {
             let block = document.getElementById(targetBlock);
             block.scrollIntoView({block: "start", behavior: "smooth"});
+        },
+        listScroll() {
+            if (this.elem[0].scrollTop + this.elem[0].clientHeight >= this.elem[0].scrollHeight) {
+                this.loadMore();
+            }
+        },
+        loadPhotos() {
+            axios.get(`/api/all-photos?perPage=10`)
+                .then(response => {
+                    this.photos = response.data.photos;
+                    this.offset += 10;
+                })
+        },
+        loadMore() {
+            axios.get(`/api/all-photos?perPage=10&offset=${this.offset}`)
+                .then(response => {
+                    this.photos = [...this.photos, ...response.data.photos];
+                    this.offset += 10;
+                })
+        },
+        onCancel() {
+            console.log('User cancelled the loader.')
         }
+    },
+    created() {
+        this.loadPhotos();
     }
 }
 </script>
