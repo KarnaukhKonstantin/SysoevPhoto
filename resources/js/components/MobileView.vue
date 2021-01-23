@@ -30,7 +30,7 @@
         </div>
 
         <div class="row mobile-main-page" id="mobile-main-page">
-            <div class="col-sm-12">
+            <div class="col-sm-12 mt-5">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
                     STANISLAV<br>SYSOEV
                 </h1>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="row mobile-portfolio" id="mobile-portfolio">
-            <div class="col-sm-12">
+            <div class="col-sm-12 pt-5">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
                     Moments
                 </h1>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="row mobile-contacts" id="mobile-contacts">
-            <div class="col-sm-12">
+            <div class="col-sm-12 pt-5">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
                     Price & Contacts
                 </h1>
@@ -89,15 +89,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-12 mt-5 text-center">
+                <a href="tel:+380661906833" class="px-1">+380661906833</a>
+                <a href="tel:+380965087310" class="px-1">+380965087310</a>
+            </div>
             <div class="col-sm-12 text-center">
                 <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-2x fa-facebook mr-2"></i></a>
                 <a href=""><i class="fa fa-2x fa-youtube mr-2"></i></a>
                 <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-2x fa-instagram mr-2"></i></a>
                 <a href="https://t.me/sysoevphoto"><i class="fa fa-2x fa-telegram mr-2"></i></a>
-            </div>
-            <div class="col-sm-12">
-                <a href="tel:+380661906833" class="px-1">+380661906833</a>
-                <a href="tel:+380965087310" class="px-1">+380965087310</a>
             </div>
         </div>
     </div>

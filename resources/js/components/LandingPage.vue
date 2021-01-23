@@ -7,20 +7,20 @@
 
             <div class="container-fluid">
                 <div class="row row-rotate">
-                    <div class="col-sm-12 col-md-1">
+                    <div class="col-sm-12 col-md-2 col-lg-1">
                         <div class="row social-sidebar">
-                            <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook mr-2"></i></a>
-                            <a href=""><i class="fa fa-youtube mr-2"></i></a>
-                            <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram mr-2"></i></a>
-                            <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram mr-2"></i></a>
+                            <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram"></i></a>
                         </div>
                     </div>
 
-                    <div class="col-sm-12 col-md-10">
+                    <div class="col-sm-12 col-md-8 col-lg-10">
                         <router-view></router-view>
                     </div>
 
-                    <div class="col-sm-12 col-md-1">
+                    <div class="col-sm-12 col-md-2 col-lg-1">
                         <div class="row navigate-sidebar pr-5">
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'main'}" tag="a">

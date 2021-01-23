@@ -21,16 +21,16 @@
 <!--            <div class="col-md-4 px-5 main-block"></div>-->
             <div class="col-md-8 px-5 main-block services">
                 <div class="row align-items-center">
-                    <div class="col-md-4 offset-md-2 my-1 pr-1">
+                    <div class="col-md-6 col-lg-4 offset-lg-2 my-1 pr-1">
                         <img src="assets/images/wedding.jpg" width="100%">
                     </div>
-                    <div class="col-md-4 my-1 pl-1">
+                    <div class="col-md-6 col-lg-4 my-1 pl-1">
                         <img src="assets/images/family.jpg" width="100%">
                     </div>
-                    <div class="col-md-4 offset-md-2 my-1 pr-1">
+                    <div class="col-md-6 col-lg-4 offset-lg-2 my-1 pr-1">
                         <img src="assets/images/lovestory.jpg" width="100%">
                     </div>
-                    <div class="col-md-4 my-1 pl-1">
+                    <div class="col-md-6 col-lg-4 my-1 pl-1">
                         <img src="assets/images/fon2.jpg" width="100%">
                     </div>
                 </div>

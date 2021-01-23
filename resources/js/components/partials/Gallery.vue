@@ -3,7 +3,7 @@
         <div class="container-fluid">
 
             <div class="row py-3 mx-0 gallery" v-if="photos.length > 0" @scroll="listScroll">
-                <div class="col-md-3 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
+                <div class="col-md-4 col-lg-3 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
                     <img :src="photo.link" class="img-fluid" style="height: 250px; object-fit: contain" @click="showFullSize(photo.link)">
                 </div>
             </div>

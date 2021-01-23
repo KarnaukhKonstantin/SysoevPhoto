@@ -20,7 +20,7 @@
             </div>
             <!--            <div class="col-md-4 px-5 main-block"></div>-->
             <div class="col-md-8 px-5 main-block services">
-                <div class="row text-grey">
+                <div class="row text-grey price-box">
                     <div class="col-md-4 offset-md-2 my-1 pr-3 text-right wedding-price">
                         <h3>Wedding</h3>
                         <h1>300$</h1>
