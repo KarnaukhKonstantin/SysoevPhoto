@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('sitemap.xml', 'PageController@sitemap');
 Route::get('/', 'PageController@landing');
 Route::get('/admin', 'PageController@admin')->middleware('auth');
 
