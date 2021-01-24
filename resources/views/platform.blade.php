@@ -24,12 +24,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.min.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app" class="all-page">
     <landing-page class="landing"></landing-page>
 </div>
-<script src="{{ mix('js/app.js') }}"></script>
+<script src="{{ mix('js/app.min.js') }}"></script>
 </body>
 </html>
