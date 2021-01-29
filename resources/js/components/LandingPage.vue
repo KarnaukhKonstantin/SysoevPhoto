@@ -2,7 +2,7 @@
     <section>
         <div class="landing-content">
             <div class="row justify-content-between align-items-center mx-4 mt-4">
-                <h6 class="name">Stanislav Sysoev</h6>
+                <h6 class="name">Станіслав Сисоєв</h6>
             </div>
 
             <div class="container-fluid">
@@ -24,27 +24,27 @@
                         <div class="row navigate-sidebar pr-5">
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'main'}" tag="a">
-                                    <li class="line-main">Main</li>
+                                    <li class="line-main">Головна</li>
                                 </router-link>
                             </ul>
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'services'}" tag="a">
-                                    <li class="line-services">Services</li>
+                                    <li class="line-services">Послуги</li>
                                 </router-link>
                             </ul>
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'portfolio'}" tag="a">
-                                    <li class="line-services">Portfolio</li>
+                                    <li class="line-services">Портфоліо</li>
                                 </router-link>
                             </ul>
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'price'}" tag="a">
-                                    <li class="line-price">Price-list</li>
+                                    <li class="line-price">Розцінки</li>
                                 </router-link>
                             </ul>
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'contacts'}" tag="a">
-                                    <li class="line-contacts">Contacts</li>
+                                    <li class="line-contacts">Контакти</li>
                                 </router-link>
                             </ul>
                         </div>

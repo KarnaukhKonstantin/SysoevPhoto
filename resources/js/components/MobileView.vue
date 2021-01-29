@@ -12,13 +12,13 @@
                         </button>
                         <div class="modal-content mobile-menu">
                             <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-main-page')">
-                                <li>Main</li>
+                                <li>Головна</li>
                             </a>
                             <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-portfolio')">
-                                <li>Portfolio</li>
+                                <li>Портфоліо</li>
                             </a>
                             <a href="#" class="d-block" data-dismiss="modal" @click="moveToScroll('mobile-contacts')">
-                                <li>Contacts</li>
+                                <li>Ціни та Контакти</li>
                             </a>
                             <div class="row justify-content-center align-items-end mt-30vh">
                                 <img src="assets/images/sysoev-logo.png" class="img-thumbnail" width="100">
@@ -32,26 +32,26 @@
         <div class="row mobile-main-page" id="mobile-main-page">
             <div class="col-sm-12 mt-5">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
-                    STANISLAV<br>SYSOEV
+                    СТАНІСЛАВ<br>СИСОЄВ
                 </h1>
-                <p>photographer</p>
+                <p>фотограф</p>
             </div>
             <div class="col-sm-12 mb-5">
-                <h6>family /</h6>
+                <h6>сімейна /</h6>
                 <h6>loveStory /</h6>
-                <h6>wedding /</h6>
-                <h6>personal</h6>
+                <h6>весілля /</h6>
+                <h6>індивідуальна</h6>
             </div>
             <div class="col-sm-12 mt-5">
                 <h6 class="title_mobile js-letter text-center" style="transform: translateX(0%) translateZ(0px);">
-                    The best moments are the happy moments <br><br> save it
+                    Найкращі моменти - це щасливі моменти! <br><br> Збережи їх
                 </h6>
             </div>
         </div>
         <div class="row mobile-portfolio" id="mobile-portfolio">
             <div class="col-sm-12 pt-5">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
-                    Moments
+                    Моменти
                 </h1>
             </div>
             <div class="row py-3 mx-0 mobile-gallery" v-if="photos.length > 0" @scroll="listScroll">
@@ -63,28 +63,28 @@
         <div class="row mobile-contacts" id="mobile-contacts">
             <div class="col-sm-12 pt-5">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
-                    Price & Contacts
+                    Ціни та Контакти
                 </h1>
-                <p>Actual basic price / 2021</p>
+                <p>Актуальний базовий прайс / 2021</p>
             </div>
             <div class="col-sm-12 px-5 price-block services">
                 <div class="row text-grey">
                     <div class="col-6 mobile-wedding-price text-right">
-                        <h3>Wedding</h3>
+                        <h3>Весілля</h3>
                         <h4>300$</h4>
                     </div>
                     <div class="col-6 mobile-family-price text-left">
-                        <h3>Family</h3>
+                        <h3>Сімейна</h3>
                         <h4>100$</h4>
                     </div>
                 </div>
                 <div class="row text-grey">
                     <div class="col-6 mobile-story-price text-right">
-                        <h3>Story</h3>
+                        <h3>loveStory</h3>
                         <h4>150$</h4>
                     </div>
                     <div class="col-6 mobile-studio-price text-left">
-                        <h3>Studio</h3>
+                        <h3>Студійна</h3>
                         <h4>200$</h4>
                     </div>
                 </div>

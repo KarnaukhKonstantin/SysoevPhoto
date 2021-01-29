@@ -4,7 +4,7 @@
             <div class="col-md-4">
                 <div class="row px-3 title title--top">
                     <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
-                        STANISLAV<br>SYSOEV
+                        СТАНІСЛАВ<br>СИСОЄВ
                     </h1>
                     <div class="border b-1">
                         <span></span>
@@ -13,7 +13,7 @@
                         <span></span>
                     </div>
                     <div class="business-title pt-3">
-                        <h3>photographer /</h3>
+                        <h3>фотограф /</h3>
                         <h3>happy maker.</h3>
                     </div>
                 </div>

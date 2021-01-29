@@ -6,7 +6,7 @@
                     <h1 class="title__text js-letter"
                         style="transform: translateX(0%) translateZ(0px); word-break: break-all;white-space: nowrap;color: rgb(255, 255, 255);
     mix-blend-mode: difference;">
-                        Get In Touch
+                        Для Зв'язку
                     </h1>
                     <div class="border b-1">
                         <span></span>

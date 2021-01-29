@@ -4,7 +4,7 @@
             <div class="col-md-4">
                 <div class="row px-3 title title--top">
                     <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
-                        My Services
+                        Я Пропоную
                     </h1>
                     <div class="border b-1">
                         <span></span>
@@ -13,8 +13,8 @@
                         <span></span>
                     </div>
                     <div class="business-title pt-3">
-                        <h3>wedding photo /</h3>
-                        <h3>family photo</h3>
+                        <h3>весільна фотографія /</h3>
+                        <h3>сімейна фотографія</h3>
                     </div>
                 </div>
             </div>
