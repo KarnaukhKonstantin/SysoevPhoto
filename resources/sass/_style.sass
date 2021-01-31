@@ -12,6 +12,18 @@ body
     color: #7e7e7e
 .text-grey
     color: #484848
+.pt-6
+    padding-top: 30px
+.pt-7
+    padding-top: 35px
+.pt-10
+    padding-top: 50px
+.pt-13
+    padding-top: 65px
+.pt-15
+    padding-top: 75px
+.pt-20
+    padding-top: 100px
 .pt-50
     padding-top: 50%
 .pt-75
@@ -43,7 +55,8 @@ body
     min-height: 100vh
     max-height: 100vh !important
     font-size: 11px
-    background-image: url("/assets/images/sysoev_stan.jpg")
+    background-color: #1e1e1e
+    //background-image: url("/assets/images/sysoev_stan.jpg")
     background-size: cover
     //object-fit: fill
     color: #fff
@@ -80,7 +93,8 @@ body
     a
         text-decoration: none
         color: #fff !important
-        font-size: 20px
+        font-size: 15px
+        font-weight: 100
         &:hover
             text-decoration: none
             color: #fff !important
@@ -97,14 +111,14 @@ body
             position: absolute
             right: 0
             top: 100%
-            width: 20px
-            height: 2px
-            background-color: #7a3f3e
+            width: 0px
+            height: 1px
+            background-color: #fff
             transition: width .3s ease-in-out
     .line-main
         &:hover
             &:after
-                width: 45px
+                width: 58px
     .line-about
         &:hover
             &:after
@@ -112,15 +126,19 @@ body
     .line-services
         &:hover
             &:after
-                width: 80px
+                width: 55px
+    .line-portfolio
+        &:hover
+            &:after
+                width: 75px
     .line-contacts
         &:hover
             &:after
-                width: 80px
+                width: 62px
     .line-price
         &:hover
             &:after
-                width: 80px
+                width: 60px
     #scroll-line
         p
             position: relative
@@ -148,7 +166,7 @@ body
     display: flex
     align-items: center
     justify-content: center
-    margin-top: 85vh
+    margin-top: 80vh
     padding: 0 20px
     i
         margin-right: 10px
@@ -160,16 +178,16 @@ body
     justify-content: flex-end
     a
         color: #ffffff !important
+    .sb-logo
+        bottom: 0 !important
 
 .gallery, .price
     align-items: center
-    background-color: rgba(255,255,255,0.4)
     position: absolute
     z-index: 100
     padding: 0
-    max-height: 75vh
+    max-height: 100vh
     overflow-y: scroll
-    margin-top: 3%
 
 /* width */
 ::-webkit-scrollbar
@@ -180,7 +198,7 @@ body
     border-radius: 20px
 /* Handle */
 ::-webkit-scrollbar-thumb
-    background: #7a3f3e
+    background: rgba(255,255,255,0.1)
     border-radius: 20px
 
 .wedding-price,
@@ -212,12 +230,12 @@ body
     color: #fff
     position: absolute
     overflow: hidden
-    top: 50%
+    top: 60%
     -webkit-transform: translate3d(0, -50%, 0)
     transform: translate3d(0, -50%, 0)
     z-index: 200
 .title__text
-    font-size: 7rem
+    font-size: 3rem
     line-height: 1
     letter-spacing: 0.1em
     margin-bottom: 1.8rem
@@ -234,12 +252,12 @@ body
     margin-bottom: 1rem
     width: 100px
     transform: translateX(0%) translateZ(0px)
-    border: 1px solid #7a3f3e !important
+    border: 1px solid #fff !important
 .business-title
     color: #fff
 
 .main-block
-    height: 75vh
+    height: 88vh
 .menu-info
     height: 95%
     width: 100%

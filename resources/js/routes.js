@@ -20,8 +20,13 @@ let routes = [
     },
     {
         path: '/portfolio',
-        component: require('./components/partials/Gallery.vue').default,
+        component: require('./components/pages/Portfolio.vue').default,
         name: 'portfolio',
+    },
+    {
+        path: '/gallery',
+        component: require('./components/partials/Gallery.vue').default,
+        name: 'gallery',
     },
     {
         path: '/price',

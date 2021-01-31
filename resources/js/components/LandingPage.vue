@@ -2,12 +2,15 @@
     <section>
         <div class="landing-content">
             <div class="row justify-content-between align-items-center mx-4 mt-4">
-                <h6 class="name">Станіслав Сисоєв</h6>
+<!--                <h6 class="name">Станіслав Сисоєв</h6>-->
             </div>
 
             <div class="container-fluid">
                 <div class="row row-rotate">
                     <div class="col-sm-12 col-md-2 col-lg-1">
+                        <div class="row pl-5">
+                            <img src="assets/images/sysoev-logo.png" class="img-thumbnail" width="100">
+                        </div>
                         <div class="row social-sidebar">
                             <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook"></i></a>
                             <a href=""><i class="fa fa-youtube"></i></a>
@@ -34,7 +37,7 @@
                             </ul>
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'portfolio'}" tag="a">
-                                    <li class="line-services">Портфоліо</li>
+                                    <li class="line-portfolio">Портфоліо</li>
                                 </router-link>
                             </ul>
                             <ul>
@@ -59,16 +62,25 @@
     </section>
 </template>
 <script>
+import debounce from "lodash/debounce";
+
 export default {
+    props: {
+        wheelTouch: Boolean
+    },
     data() {
         return {
             fullImageSource: '',
+            start: 0,
         }
     },
     mounted() {
         //
     },
     methods: {
+        //
+    },
+    created() {
         //
     }
 }

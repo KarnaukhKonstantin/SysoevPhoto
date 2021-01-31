@@ -1,25 +1,18 @@
 <template>
-    <transition appear name="fade" :duration="10000">
-        <div class="row pt-5">
-            <div class="col-md-4">
+    <transition appear name="fade" :duration="20000">
+        <div class="row pt-5 site">
+            <div class="col-md-2">
                 <div class="row px-3 title title--top">
                     <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
-                        Я Пропоную
+                        Я<br>ПРОПОНУЮ
                     </h1>
-                    <div class="border b-1">
-                        <span></span>
-                    </div>
-                    <div class="border b-2">
-                        <span></span>
-                    </div>
                     <div class="business-title pt-3">
-                        <h3>весільна фотографія /</h3>
-                        <h3>сімейна фотографія</h3>
+                        <h6>весільна фотографія /</h6>
+                        <h6>сімейна фотографія</h6>
                     </div>
                 </div>
             </div>
-<!--            <div class="col-md-4 px-5 main-block"></div>-->
-            <div class="col-md-8 px-5 main-block services">
+            <div class="col-md-10 main-block px-0 services">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-4 offset-lg-2 my-1 pr-1">
                         <img src="assets/images/wedding.jpg" width="100%">
@@ -45,8 +38,11 @@ export default {
             pageNumber: 3,
         }
     },
+    mounted() {
+        //
+    },
     created() {
-        // console.log('check w');
+        //
     }
 }
 </script>

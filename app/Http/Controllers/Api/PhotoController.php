@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Category;
 use App\Gallery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -48,6 +49,10 @@ class PhotoController extends Controller
         $offset = $request->offset ?? 0;
         $count = Gallery::count();
         $photos = Gallery::orderBy('id', 'desc')->take($perPage)->offset($offset)->get();
+//        $categories = Category::orderBy('id', 'desc')->take($perPage)->offset($offset)->pluck('id')->toArray();
+//        $categoryPhotos = Gallery::whereIn('category_id', $categories)->get();
+//        $categoryPhotos = $categoryPhotos->groupBy('category_id');
+//        $categoryPhotos = array_values($categoryPhotos->toArray());
 
         return response()->json(compact('photos', 'count'));
     }

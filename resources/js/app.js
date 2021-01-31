@@ -10,6 +10,7 @@ import VueRouter from 'vue-router';
 import router from './routes';
 import VueScrollReveal from 'vue-scroll-reveal';
 import rumuslog from 'rumuslog';
+import debounce from 'lodash/debounce';
 
 
 window.Vue = require('vue');
@@ -71,9 +72,37 @@ const app = new Vue({
     el: '#app',
     router,
 
+    data: {
+        pages: [
+            '/',
+            '/services',
+            '/portfolio',
+            '/price',
+            '/contacts'
+        ],
+    },
     methods: {
+        handleScroll: function (event) {
+            console.log(this.$route.path !== '/gallery');
+            if (this.$route.path !== '/gallery') {
+                if (event.deltaY > 0) {
+                    this.start = this.start < 4 ? this.start + 1 : this.start = 0;
+                } else {
+                    this.start = this.start > 0 ? this.start - 1 : this.start = 4;
+                }
+                this.$router.push(this.pages[this.start]).catch(()=>{});
+            }
+            // console.log(this.pages);
+        },
         check() {
             rumuslog.checkLog();
         }
+    },
+    mounted() {
+        this.handleDebouncedScroll = debounce(this.handleScroll, 10000);
+        window.addEventListener('wheel', this.handleScroll);
+    },
+    created() {
+
     }
 });

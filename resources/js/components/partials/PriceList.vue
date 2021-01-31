@@ -1,26 +1,19 @@
 <template>
-    <transition appear name="fade" :duration="10000">
-        <div class="row pt-5">
-            <div class="col-md-4">
+    <transition appear name="fade" :duration="20000">
+        <div class="row pt-5 site">
+            <div class="col-md-2">
                 <div class="row px-3 title title--top">
                     <h1 class="title__text js-letter" style="transform: translateX(0%) translateZ(0px);">
-                        Розцінки
+                        МОЇ<br>РОЗЦІНКИ
                     </h1>
-                    <div class="border b-1">
-                        <span></span>
-                    </div>
-                    <div class="border b-2">
-                        <span></span>
-                    </div>
                     <div class="business-title pt-3">
-                        <h3>Актуальний базовий прайс /</h3>
-                        <h3>2021</h3>
+                        <h6>Актуальний базовий прайс /</h6>
+                        <h6>2021</h6>
                     </div>
                 </div>
             </div>
-            <!--            <div class="col-md-4 px-5 main-block"></div>-->
-            <div class="col-md-8 px-5 main-block services">
-                <div class="row text-grey price-box">
+            <div class="col-md-10 main-block px-0 services">
+                <div class="row text-grey price-box pt-20">
                     <div class="col-md-4 offset-md-2 my-1 pr-3 text-right wedding-price">
                         <h3>Весілля</h3>
                         <h1>300$</h1>
@@ -46,11 +39,14 @@
 export default {
     data () {
         return {
-
+           //
         }
     },
+    mounted() {
+        //
+    },
     methods: {
-
+        //
     }
 }
 </script>
