@@ -12,9 +12,9 @@
                     </div>
 
                     <div class="business-title pt-3 text-right">
-                        <router-link class="d-block" :to="{ name: 'gallery'}" tag="a">
-                            <h6>...тут більше</h6>
-                        </router-link>
+<!--                        <router-link class="d-block" :to="{ name: 'gallery'}" tag="a">-->
+<!--                            <h6>...тут більше</h6>-->
+<!--                        </router-link>-->
                     </div>
                 </div>
             </div>

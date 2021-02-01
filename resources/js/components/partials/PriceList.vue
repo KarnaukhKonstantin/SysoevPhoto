@@ -12,23 +12,38 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 main-block px-0 services">
+            <div class="col-md-10 main-block px-0 prices">
                 <div class="row text-grey price-box pt-20">
-                    <div class="col-md-4 offset-md-2 my-1 pr-3 text-right wedding-price">
-                        <h3>Весілля</h3>
-                        <h1>300$</h1>
+                    <div class="col-md-6 my-1 pr-5 text-right wedding-price">
+                        <h1 class="mb-3">Стандарт</h1>
+                        <h5>- 6 годин зйомки</h5>
+                        <h5>- повна обробка усіх фото (не менше 400)</h5>
+                        <h5>- термін готовности 1 - 2 місяці</h5>
+                        <h5>- ретуш великих портретів</h5>
+                        <h5>- знижка на loveStory 15%</h5>
+                        <h1 class="mt-3">6000 грн</h1>
                     </div>
-                    <div class="col-md-4 my-1 ml-2 pl-3 text-left family-price">
-                        <h3>Сімейна</h3>
-                        <h1>100$</h1>
+                    <div class="col-md-5 my-1 ml-2 pl-5 text-left family-price">
+                        <h1 class="mb-3">Преміум</h1>
+                        <h5>- 8 годин зйомки</h5>
+                        <h5>- повна обробка усіх фото (не менше 500)</h5>
+                        <h5>- термін готовности 1 - 2 місяці</h5>
+                        <h5>- ретуш великих портретів</h5>
+                        <h5>- знижка на loveStory 25%</h5>
+                        <h1 class="mt-3">8000 грн</h1>
                     </div>
-                    <div class="col-md-4 offset-md-2 my-1 pr-3 text-right story-price">
-                        <h3>loveStory</h3>
-                        <h1>150$</h1>
+                    <div class="col-md-6 my-1 pr-5 text-right story-price">
+                        <h1 class="mb-3">Повний день</h1>
+                        <h5>- 12 годин зйомки</h5>
+                        <h5>- повна обробка усіх фото (не менше 700)</h5>
+                        <h5>- термін готовности 1 - 2 місяці</h5>
+                        <h5>- ретуш великих портретів</h5>
+                        <h5>- знижка на loveStory 50%</h5>
+                        <h1 class="mt-3">10500 грн</h1>
                     </div>
-                    <div class="col-md-4 my-1 ml-2 pl-3 text-left studio-price">
-                        <h3>Студійна</h3>
-                        <h1>200$</h1>
+                    <div class="col-md-5 my-1 ml-2 pl-5 text-left studio-price">
+                        <h1 class="mb-3">Індивідуальна</h1>
+                        <h5 class="mt-3">Умови та Прайс розглядаються в залежності від побажань</h5>
                     </div>
                 </div>
             </div>
