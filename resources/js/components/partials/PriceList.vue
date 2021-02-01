@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-10 main-block px-0 prices">
                 <div class="row text-grey price-box pt-20">
-                    <div class="col-md-6 my-1 pr-5 text-right wedding-price">
+                    <div class="col-md-5 offset-1 my-1 pr-5 text-right wedding-price">
                         <h1 class="mb-3">Стандарт</h1>
                         <h5>- 6 годин зйомки</h5>
                         <h5>- повна обробка усіх фото (не менше 400)</h5>
@@ -32,7 +32,7 @@
                         <h5>- знижка на loveStory 25%</h5>
                         <h1 class="mt-3">8000 грн</h1>
                     </div>
-                    <div class="col-md-6 my-1 pr-5 text-right story-price">
+                    <div class="col-md-5 offset-1 my-1 pr-5 text-right story-price">
                         <h1 class="mb-3">Повний день</h1>
                         <h5>- 12 годин зйомки</h5>
                         <h5>- повна обробка усіх фото (не менше 700)</h5>
