@@ -47,14 +47,28 @@ class PhotoController extends Controller
     {
         $perPage = $request->perPage ?? 10;
         $offset = $request->offset ?? 0;
-        $count = Gallery::count();
-        $photos = Gallery::orderBy('id', 'desc')->take($perPage)->offset($offset)->get();
-//        $categories = Category::orderBy('id', 'desc')->take($perPage)->offset($offset)->pluck('id')->toArray();
-//        $categoryPhotos = Gallery::whereIn('category_id', $categories)->get();
-//        $categoryPhotos = $categoryPhotos->groupBy('category_id');
-//        $categoryPhotos = array_values($categoryPhotos->toArray());
 
-        return response()->json(compact('photos', 'count'));
+        $count = Gallery::count();
+        $photos = Gallery::whereNull('category_id')
+            ->orderBy('id', 'desc')
+            ->take($perPage)
+            ->offset($offset)
+            ->get();
+        $categoryPhotos = Gallery::whereNotNull('category_id')
+            ->where('is_main_photo', true)
+            ->orderBy('id', 'desc')
+            ->take($perPage)
+            ->offset($offset)
+            ->with('category')
+            ->get();
+
+        return response()->json(compact('photos', 'categoryPhotos', 'count'));
+    }
+
+    public function loadSession($categoryId)
+    {
+        $photos = Gallery::where('category_id', $categoryId)->get();
+        return response()->json($photos);
     }
 
     public function delete(Request $request)

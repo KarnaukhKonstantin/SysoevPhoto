@@ -26,7 +26,17 @@ let routes = [
     {
         path: '/gallery',
         component: require('./components/partials/Gallery.vue').default,
-        name: 'gallery',
+        name: 'gallery'
+    },
+    {
+        path: '/wedding-gallery',
+        component: require('./components/partials/WeddingGallery.vue').default,
+        name: 'wedding-gallery',
+    },
+    {
+        path: '/other-gallery',
+        component: require('./components/partials/OtherGallery.vue').default,
+        name: 'other-gallery',
     },
     {
         path: '/price',

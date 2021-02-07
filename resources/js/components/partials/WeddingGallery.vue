@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div id="gallery" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div id="wedding-gallery" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-body mt-0 pt-1">
@@ -82,7 +82,7 @@ export default {
         }
     },
     mounted() {
-        this.elem = document.getElementsByClassName('gallery');
+        this.elem = document.getElementsByClassName('wedding-gallery');
     },
     methods: {
         listScroll() {

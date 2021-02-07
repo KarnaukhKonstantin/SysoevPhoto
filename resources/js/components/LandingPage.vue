@@ -50,6 +50,18 @@
                                     <li class="line-contacts">Контакти</li>
                                 </router-link>
                             </ul>
+
+
+                            <ul class="mt-200">
+                                <router-link class="d-block" :to="{ name: 'gallery'}" tag="a">
+                                    <li class="line-price">Весільні</li>
+                                </router-link>
+                            </ul>
+                            <ul>
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <li class="line-contacts">Інші</li>
+                                </router-link>
+                            </ul>
                         </div>
                     </div>
                 </div>

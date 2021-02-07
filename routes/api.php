@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/upload-photo', 'Api\PhotoController@upload');
 Route::get('/all-photos', 'Api\PhotoController@getPhotos');
+Route::get('/full-session/{categoryId}', 'Api\PhotoController@loadSession');
 Route::post('/delete', 'Api\PhotoController@delete');

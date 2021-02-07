@@ -11,6 +11,7 @@ import router from './routes';
 import VueScrollReveal from 'vue-scroll-reveal';
 import rumuslog from 'rumuslog';
 import debounce from 'lodash/debounce';
+import VueMasonry from 'vue-masonry-css'
 
 
 window.Vue = require('vue');
@@ -30,6 +31,7 @@ Vue.use(VueScrollReveal, {
     },
 });
 Vue.use(rumuslog);
+Vue.use(VueMasonry);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -54,6 +56,8 @@ Vue.component('navigate-page', require('./components/partials/Navigate.vue').def
 Vue.component('footer-page', require('./components/partials/Footer.vue').default);
 Vue.component('header-menu', require('./components/partials/HeaderMenu.vue').default);
 Vue.component('gallery', require('./components/partials/Gallery.vue').default);
+Vue.component('other-gallery', require('./components/partials/OtherGallery.vue').default);
+Vue.component('wedding-gallery', require('./components/partials/WeddingGallery.vue').default);
 Vue.component('price-list', require('./components/partials/PriceList.vue').default);
 
 Vue.component('Main-page', require('./components/pages/MainPage.vue').default);
@@ -84,7 +88,7 @@ const app = new Vue({
     methods: {
         handleScroll: function (event) {
             console.log(this.$route.path !== '/gallery');
-            if (this.$route.path !== '/gallery') {
+            if (this.$route.path !== '/gallery' && this.$route.path !== '/other-gallery') {
                 if (event.deltaY > 0) {
                     this.start = this.start < 4 ? this.start + 1 : this.start = 0;
                 } else {
