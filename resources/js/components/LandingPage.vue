@@ -59,7 +59,7 @@
                             </ul>
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
-                                    <li class="line-contacts">Інші</li>
+                                    <li class="line-other">Інші</li>
                                 </router-link>
                             </ul>
                         </div>

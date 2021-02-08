@@ -16,10 +16,11 @@
                         <div class="col-md-12 category d-block w-100 mx-auto my-3 text-center"
                              v-for="category in categoryPhotos"
                              @click="showCategory(category)">
-                            <div class="text-right" style="position: absolute;top: 8px; right: 25px;">
-                                <i class="fa fa-2x fa-clone"></i>
-                            </div>
                             <img :src="category.link" class="img-fluid" style="object-fit: contain">
+                            <div class="category-name">
+                                {{ category.category.name }}
+                                <i class="fa fa-clone mx-2"></i>
+                            </div>
                             <div class="overlay">
                                 <div class="text">
                                     {{ category.category.name }}
@@ -82,7 +83,7 @@ export default {
         }
     },
     mounted() {
-        this.elem = document.getElementsByClassName('gallery');
+        this.elem = document.getElementsByClassName(' ');
     },
     methods: {
         listScroll() {
@@ -130,6 +131,13 @@ export default {
 }
 </script>
 <style>
+.category .category-name {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 20px;
+    background-color: rgba(0,0,0,0.5);
+}
 .category .overlay {
     position: absolute;
     top: 0;
@@ -144,6 +152,10 @@ export default {
 }
 .category:hover .overlay {
     opacity: 1;
+}
+.category:hover  .category-name {
+    display: none;
+    transition: .5s ease;
 }
 .category .text {
     color: white;

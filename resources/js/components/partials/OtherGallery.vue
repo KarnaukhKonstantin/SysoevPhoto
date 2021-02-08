@@ -56,14 +56,14 @@ export default {
             $('#other-gallery').modal('show');
         },
         loadPhotos() {
-            axios.get(`/api/all-photos?perPage=16`)
+            axios.get(`/api/other-photos?perPage=16`)
                 .then(response => {
                     this.photos = response.data.photos;
                     this.offset += 16;
                 })
         },
         loadMore() {
-            axios.get(`/api/all-photos?perPage=16&offset=${this.offset}`)
+            axios.get(`/api/other-photos?perPage=16&offset=${this.offset}`)
                 .then(response => {
                     this.photos = [...this.photos, ...response.data.photos];
                     this.offset += 16;

@@ -65,6 +65,21 @@ class PhotoController extends Controller
         return response()->json(compact('photos', 'categoryPhotos', 'count'));
     }
 
+    public function getOtherPhotos(Request $request)
+    {
+        $perPage = $request->perPage ?? 10;
+        $offset = $request->offset ?? 0;
+
+        $count = Gallery::count();
+        $photos = Gallery::whereNull('category_id')
+            ->orderBy('id', 'desc')
+            ->take($perPage)
+            ->offset($offset)
+            ->get();
+
+        return response()->json(compact('photos', 'count'));
+    }
+
     public function loadSession($categoryId)
     {
         $photos = Gallery::where('category_id', $categoryId)->get();

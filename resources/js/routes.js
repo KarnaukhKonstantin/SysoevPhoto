@@ -29,11 +29,6 @@ let routes = [
         name: 'gallery'
     },
     {
-        path: '/wedding-gallery',
-        component: require('./components/partials/WeddingGallery.vue').default,
-        name: 'wedding-gallery',
-    },
-    {
         path: '/other-gallery',
         component: require('./components/partials/OtherGallery.vue').default,
         name: 'other-gallery',

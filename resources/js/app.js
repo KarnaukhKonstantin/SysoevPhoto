@@ -57,7 +57,6 @@ Vue.component('footer-page', require('./components/partials/Footer.vue').default
 Vue.component('header-menu', require('./components/partials/HeaderMenu.vue').default);
 Vue.component('gallery', require('./components/partials/Gallery.vue').default);
 Vue.component('other-gallery', require('./components/partials/OtherGallery.vue').default);
-Vue.component('wedding-gallery', require('./components/partials/WeddingGallery.vue').default);
 Vue.component('price-list', require('./components/partials/PriceList.vue').default);
 
 Vue.component('Main-page', require('./components/pages/MainPage.vue').default);
