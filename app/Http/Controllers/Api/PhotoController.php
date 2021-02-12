@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Category;
 use App\Gallery;
+use App\PhotoSession;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -11,12 +12,27 @@ use Intervention\Image\Exception\NotReadableException;
 
 class PhotoController extends Controller
 {
+    public function storeSession(Request $request)
+    {
+        return PhotoSession::create(['name' => $request->title]);
+    }
+
+    public function getSessions()
+    {
+        return PhotoSession::all();
+    }
+
     public function upload(Request $request)
     {
+        $inputs = $request->all();
+        $categoryId = $inputs['categoryId'] ?? Category::IS_OTHER;
+        $items = $inputs['items'];
+        $sessionId = $inputs['sessionId'] ?? null;
+
         $files = [];
         $storePhotos = [];
 
-        foreach ($request->items as $file) {
+        foreach ($items as $file) {
 
             $name = time() .'_'. $file->getClientOriginalName();
             $name = str_replace([' ', '-', ','], '_', $name);
@@ -29,8 +45,10 @@ class PhotoController extends Controller
             $file->save($destinationPath.$name, 90);
             $files[] = $destinationPath . $name;
             $storePhotos[] = [
-                'name' => $name,
-                'link' => 'storage/photos/' . $name
+                'name'             => $name,
+                'link'             => 'storage/photos/' . $name,
+                'category_id'      => $categoryId,
+                'photo_session_id' => $sessionId
             ];
         }
         $this->store($storePhotos);
@@ -108,5 +126,22 @@ class PhotoController extends Controller
         }
 
         return response()->json('Photos were deleted successfully!');
+    }
+
+    public function getWeddingPhotos(Request $request)
+    {
+        $perPage = $request->perPage ?? 10;
+        $offset = $request->offset ?? 0;
+
+        $count = Gallery::count();
+        $categoryPhotos = Gallery::whereNotNull('category_id')
+            ->where('is_main_photo', true)
+            ->orderBy('id', 'desc')
+            ->take($perPage)
+            ->offset($offset)
+            ->with('category')
+            ->get();
+
+        return response()->json(compact( 'categoryPhotos', 'count'));
     }
 }

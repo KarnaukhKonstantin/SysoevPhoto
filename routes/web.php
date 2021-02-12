@@ -18,7 +18,12 @@ Route::get('/admin', 'PageController@admin')->middleware('auth');
 
 Auth::routes();
 
-Route::get('{any}', function () {
-    return view('platform');
+$adminRoutes = ['admin', 'other', 'wedding'];
+Route::get('{any}', function () use ($adminRoutes) {
+    if (in_array(request()->path(), $adminRoutes)) {
+        return view('admin');
+    } else {
+        return view('platform');
+    }
 })->where('any','.*');
 

@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/session', 'Api\PhotoController@storeSession');
+Route::get('/photo-sessions', 'Api\PhotoController@getSessions');
 Route::post('/upload-photo', 'Api\PhotoController@upload');
 Route::get('/all-photos', 'Api\PhotoController@getPhotos');
+Route::get('/wedding-photos', 'Api\PhotoController@getWeddingPhotos');
 Route::get('/other-photos', 'Api\PhotoController@getOtherPhotos');
 Route::get('/full-session/{categoryId}', 'Api\PhotoController@loadSession');
 Route::post('/delete', 'Api\PhotoController@delete');

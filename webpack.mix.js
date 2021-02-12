@@ -13,4 +13,5 @@ const mix = require('laravel-mix');
 
 mix
     .js('resources/js/app.js', 'public/js').minify('public/js/app.js')
+    .js('resources/js/adminApp.js', 'public/js').minify('public/js/adminApp.js')
     .sass('resources/sass/app.scss', 'public/css').minify('public/css/app.css');
