@@ -14,16 +14,16 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12 category d-block w-100 mx-auto my-3 text-center"
-                             v-for="category in categoryPhotos"
-                             @click="showCategory(category)">
-                            <img :src="category.link" class="img-fluid" style="object-fit: contain">
+                             v-for="pack in categoryPhotos"
+                             @click="showCategory(pack)">
+                            <img :src="pack.link" class="img-fluid" style="object-fit: contain">
                             <div class="category-name">
-                                {{ category.category.name }}
+                                {{ pack.session.name }}
                                 <i class="fa fa-clone mx-2"></i>
                             </div>
                             <div class="overlay">
                                 <div class="text">
-                                    {{ category.category.name }}
+                                    {{ pack.session.name }}
                                     <p class="mt-3">відкрий</p>
                                 </div>
                             </div>
@@ -49,10 +49,10 @@
             </div>
 
             <div id="category-gallery" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog modal-xl" role="document">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                     <div class="modal-content">
-                        <div class="modal-body mt-0 pt-1">
-                            <div class="container-fluid px-0">
+                        <div class="modal-body mt-0">
+                            <div class="container-fluid px-1">
                                 <masonry :cols="3" :gutter="30">
                                     <div v-for="(session, index) in fullCategorySession" :key="index" class="bricks">
                                         <img :src="session.link" class="img-fluid">
@@ -79,11 +79,11 @@ export default {
             fullPage: true,
             page: 1,
             offset: 0,
-            elem: '',
+            elem: ''
         }
     },
     mounted() {
-        this.elem = document.getElementsByClassName(' ');
+        this.elem = document.getElementsByClassName('gallery');
     },
     methods: {
         listScroll() {
@@ -95,8 +95,8 @@ export default {
             this.fullImageSource = img;
             $('#gallery').modal('show');
         },
-        showCategory(category) {
-            this.loadFullCategory(category.category.id);
+        showCategory(photoSession) {
+            this.loadFullPhotoSession(photoSession.photo_session_id);
         },
         loadPhotos() {
             axios.get(`/api/all-photos?perPage=16`)
@@ -114,8 +114,8 @@ export default {
                     this.offset += 16;
                 })
         },
-        loadFullCategory(categoryId) {
-            axios.get(`/api/full-session/${categoryId}`)
+        loadFullPhotoSession(photoSessionId) {
+            axios.get(`/api/full-session/${photoSessionId}`)
                 .then(response => {
                     this.fullCategorySession = response.data;
                     $('#category-gallery').modal('show');

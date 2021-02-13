@@ -13,4 +13,9 @@ class Gallery extends Model
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
+
+    public function session()
+    {
+        return $this->belongsTo(PhotoSession::class, 'photo_session_id');
+    }
 }
