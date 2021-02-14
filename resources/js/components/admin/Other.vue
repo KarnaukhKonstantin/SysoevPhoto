@@ -57,9 +57,6 @@ export default {
         check() {
             console.log(this.new);
         },
-        loadPhotos() {
-
-        },
         loadOtherPhotos() {
             axios.get('/api/other-photos?perPage=10&offset=' + this.offset)
                 .then(response => {
@@ -70,11 +67,11 @@ export default {
         },
         loadMore() {
             this.offset += 10;
-            this.loadPhotos();
+            this.loadOtherPhotos();
         },
         uploadSuccess() {
             this.resetData();
-            this.loadPhotos();
+            this.loadOtherPhotos();
         },
         selectItem (photo, index) {
             this.selectedItems.includes(index)
@@ -103,7 +100,7 @@ export default {
         }
     },
     created() {
-        this.loadPhotos();
+        this.loadOtherPhotos();
     }
 }
 </script>

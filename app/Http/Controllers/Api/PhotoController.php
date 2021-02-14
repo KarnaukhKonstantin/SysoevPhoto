@@ -83,7 +83,7 @@ class PhotoController extends Controller
         $offset = $request->offset ?? 0;
 
         $count = Gallery::count();
-        $photos = Gallery::whereNull('category_id')
+        $photos = Gallery::where('category_id', 0)
             ->orderBy('id', 'desc')
             ->take($perPage)
             ->offset($offset)
