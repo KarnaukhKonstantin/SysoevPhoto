@@ -2,7 +2,7 @@
     <transition appear name="fade" :duration="10000">
         <div class="container-fluid">
 
-            <div class="row py-3 mx-0 gallery" v-if="photos.length > 0" @scroll="listScroll">
+            <div class="row py-3 mx-0 other-gallery" v-if="photos.length > 0" @scroll="listScroll">
                 <masonry :cols="3" :gutter="30">
                     <div v-for="(photo, index) in photos" :key="index" class="bricks">
                         <img :src="photo.link" class="img-fluid" @click="showFullSize(photo.link)">
