@@ -35,7 +35,7 @@
                <div class="col-md-6">
                     <div class="row align-items-center px-3">
                         <div class="col-md-6 py-1 thumbnail text-center" v-for="wSession in weddingSessions" @click="openSession(wSession)">
-                            <div class="card">
+                            <div class="card" v-if="wSession.photos.length > 0">
                                 <img :src="wSession.photos[0].link" class="img-fluid">
                                 <p class="py-1">{{wSession.name}}</p>
                             </div>
