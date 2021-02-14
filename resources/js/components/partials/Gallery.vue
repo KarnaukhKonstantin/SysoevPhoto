@@ -2,8 +2,8 @@
     <transition appear name="fade" :duration="10000">
         <div class="container-fluid">
 
-            <div class="row py-3 mx-0 gallery" v-if="photos.length > 0" @scroll="listScroll">
-                <div class="col-md-6">
+            <div class="row py-3 mx-0 gallery" v-if="photos.length > 0 || categoryPhotos.length > 0" @scroll="listScroll">
+                <div class="col-md-6" v-if="photos.length > 0">
                     <div class="row">
                         <div class="col-md-6 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
                             <img :src="photo.link" class="img-fluid" style="height: 250px; object-fit: contain"
@@ -11,9 +11,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div :class="{'col-md-6': photos.length > 0, 'col-md-12': photos.length === 0}">
                     <div class="row">
-                        <div class="col-md-12 category d-block w-100 mx-auto my-3 text-center"
+                        <div class="category d-block w-100 mx-auto my-3 text-center"
+                             :class="{'col-md-12': photos.length > 0, 'col-md-6': photos.length === 0}"
                              v-for="pack in categoryPhotos"
                              @click="showCategory(pack)">
                             <img :src="pack.link" class="img-fluid" style="object-fit: contain">

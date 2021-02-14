@@ -47,7 +47,7 @@ export default {
     },
     methods: {
         listScroll() {
-            if (this.elem[0].scrollTop + this.elem[0].clientHeight >= this.elem[0].scrollHeight) {
+            if (this.elem[0].scrollTop + this.elem[0].clientHeight + 250 >= this.elem[0].scrollHeight) {
                 this.loadMore();
             }
         },
