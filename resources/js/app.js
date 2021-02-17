@@ -34,9 +34,9 @@ Vue.component('mobile-view', require('./components/MobileView.vue').default);
 Vue.component('navigate-page', require('./components/partials/Navigate.vue').default);
 Vue.component('footer-page', require('./components/partials/Footer.vue').default);
 Vue.component('header-menu', require('./components/partials/HeaderMenu.vue').default);
-Vue.component('gallery', require('./components/partials/Gallery.vue').default);
-Vue.component('other-gallery', require('./components/partials/OtherGallery.vue').default);
-Vue.component('price-list', require('./components/partials/PriceList.vue').default);
+Vue.component('price-list', require('./components/pages/PriceList.vue').default);
+Vue.component('gallery', require('./components/galleries/Gallery.vue').default);
+Vue.component('other-gallery', require('./components/galleries/OtherGallery.vue').default);
 
 Vue.component('Main-page', require('./components/pages/MainPage.vue').default);
 Vue.component('Services-page', require('./components/pages/Services.vue').default);
@@ -61,7 +61,6 @@ const app = new Vue({
     },
     methods: {
         handleScroll: function (event) {
-            console.log(this.$route.path !== '/gallery');
             if (this.$route.path !== '/gallery' && this.$route.path !== '/other-gallery' && this.pages.includes(this.$route.path)) {
                 if (event.deltaY > 0) {
                     this.start = this.start < 4 ? this.start + 1 : this.start = 0;
@@ -70,7 +69,6 @@ const app = new Vue({
                 }
                 this.$router.push(this.pages[this.start]).catch(()=>{});
             }
-            // console.log(this.pages);
         },
         check() {
             rumuslog.checkLog();

@@ -37,26 +37,36 @@
                 <p>фотограф</p>
             </div>
             <div class="col-sm-12 mb-5">
-                <h6>сімейна /</h6>
-                <h6>loveStory /</h6>
-                <h6>весілля /</h6>
-                <h6>індивідуальна</h6>
+                <div class="row justify-content-around px-0">
+                    <div class="col-xs-6">
+                        <a href="https://www.instagram.com/sysoevphoto/" target="_blank">
+                            <img src="/assets/images/stas1.jpg" class="img-preview">
+                            <img src="/assets/images/instagramm.png" width="20px" style="position: absolute; top: 68%; left:42%">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <h6>сімейна /</h6>
+                        <h6>loveStory /</h6>
+                        <h6>весілля /</h6>
+                        <h6>індивідуальна</h6>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-12 mt-5">
                 <h6 class="title_mobile js-letter text-center" style="transform: translateX(0%) translateZ(0px);">
-                    Найкращі моменти - це щасливі моменти! <br><br> Збережи їх
+                    Цінуйте моменти... <br><br> Збережемо їх!
                 </h6>
             </div>
         </div>
         <div class="row mobile-portfolio" id="mobile-portfolio">
             <div class="col-sm-12 pt-5">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
-                    Моменти
+                    Моменти & Спогади
                 </h1>
             </div>
             <div class="row py-3 mx-0 mobile-gallery" v-if="photos.length > 0" @scroll="listScroll">
-                <div class="col-md-3 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
-                    <img :src="photo.link" class="img-fluid" style="height: 250px; object-fit: contain">
+                <div class="col-md-12 d-block w-100 text-center px-1 my-1" v-for="photo in photos">
+                    <img :src="photo.link" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -69,23 +79,23 @@
             </div>
             <div class="col-sm-12 px-5 price-block services">
                 <div class="row text-grey">
-                    <div class="col-6 mobile-wedding-price text-right">
-                        <h3>Весілля</h3>
-                        <h4>300$</h4>
+                    <div class="col-5 mobile-wedding-price text-right">
+                        <h4>Весілля</h4>
+                        <h5>300$</h5>
                     </div>
                     <div class="col-6 mobile-family-price text-left">
-                        <h3>Сімейна</h3>
-                        <h4>100$</h4>
+                        <h4>Сімейна</h4>
+                        <h5>100$</h5>
                     </div>
                 </div>
                 <div class="row text-grey">
-                    <div class="col-6 mobile-story-price text-right">
-                        <h3>loveStory</h3>
-                        <h4>150$</h4>
+                    <div class="col-5 mobile-story-price text-right pl-1">
+                        <h4>loveStory</h4>
+                        <h5>150$</h5>
                     </div>
                     <div class="col-6 mobile-studio-price text-left">
-                        <h3>Студійна</h3>
-                        <h4>200$</h4>
+                        <h4>Студійна</h4>
+                        <h5>200$</h5>
                     </div>
                 </div>
             </div>
