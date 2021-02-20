@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 main-block px-3 pt-4">
+            <div class="col-md-10 main-block px-3">
                 <div class="row py-1">
                     <div class="col-md-6">
                         <div class="row">
