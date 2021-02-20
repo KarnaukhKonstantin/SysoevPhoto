@@ -77,6 +77,11 @@
                     <img :src="photo.link" class="img-fluid">
                 </div>
             </div>
+            <div class="row py-3 mx-0 mobile-gallery" v-if="photos.length === 0">
+                <div class="col-md-12 d-block w-100 text-center px-1 my-1" v-for="photo in otherPhotos">
+                    <img :src="photo.link" class="img-fluid">
+                </div>
+            </div>
         </div>
         <div class="row mobile-contacts my-5" id="mobile-contacts">
             <div class="col-sm-12">
@@ -159,6 +164,7 @@ export default {
     data() {
         return {
             photos: [],
+            otherPhotos: [],
             isLoading: false,
             fullPage: true,
             page: 1,
@@ -189,6 +195,13 @@ export default {
             axios.get(`/api/all-photos?perPage=10`)
                 .then(response => {
                     this.photos = response.data.photos;
+                    this.offset += 10;
+                })
+        },
+        loadOtherPhotos() {
+            axios.get(`/api/other-photos?perPage=50`)
+                .then(response => {
+                    this.otherPhotos = response.data.photos;
                     this.offset += 10;
                 })
         },
