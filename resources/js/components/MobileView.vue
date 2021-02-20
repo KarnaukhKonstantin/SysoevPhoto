@@ -218,6 +218,7 @@ export default {
     },
     created() {
         this.loadPhotos();
+        this.loadOtherPhotos();
     }
 }
 </script>
