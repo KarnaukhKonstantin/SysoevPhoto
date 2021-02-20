@@ -38,64 +38,105 @@
             </div>
             <div class="col-sm-12 mb-5">
                 <div class="row justify-content-around px-0">
-                    <div class="col-xs-6">
+                    <div class="col-xs-8">
                         <a href="https://www.instagram.com/sysoevphoto/" target="_blank">
-                            <img src="/assets/images/stas1.jpg" class="img-preview">
-                            <img src="/assets/images/instagramm.png" width="20px" style="position: absolute; top: 68%; left:42%">
+                            <img src="/assets/images/stas1.png" class="img-preview">
                         </a>
                     </div>
-                    <div class="col-xs-6 text-right">
+                    <div class="col-xs-4 text-right mobile-info">
                         <h6>сімейна /</h6>
                         <h6>loveStory /</h6>
                         <h6>весілля /</h6>
                         <h6>індивідуальна</h6>
+                        <h6 class="mt-200"><a href="tel:+380661906833">+380661906833</a></h6>
+                        <h6><a href="tel:+380965087310">+380965087310</a></h6>
+
+                        <div class="row justify-content-end mt-4">
+                            <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook mr-2"></i></a>
+                            <a href=""><i class="fa fa-youtube mr-2"></i></a>
+                            <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram mr-2"></i></a>
+                            <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram mr-2"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 mt-5">
+            <div class="col-sm-12 my-5">
                 <h6 class="title_mobile js-letter text-center" style="transform: translateX(0%) translateZ(0px);">
                     Цінуйте моменти... <br><br> Збережемо їх!
                 </h6>
             </div>
         </div>
+        <div class="col-sm-12 my-5">
+            <h1 class="title_mobile js-letter mb-0">
+                Моменти & Спогади
+            </h1>
+        </div>
         <div class="row mobile-portfolio" id="mobile-portfolio">
-            <div class="col-sm-12 pt-5">
-                <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
-                    Моменти & Спогади
-                </h1>
-            </div>
             <div class="row py-3 mx-0 mobile-gallery" v-if="photos.length > 0" @scroll="listScroll">
                 <div class="col-md-12 d-block w-100 text-center px-1 my-1" v-for="photo in photos">
                     <img :src="photo.link" class="img-fluid">
                 </div>
             </div>
         </div>
-        <div class="row mobile-contacts" id="mobile-contacts">
-            <div class="col-sm-12 pt-5">
+        <div class="row mobile-contacts my-5" id="mobile-contacts">
+            <div class="col-sm-12">
                 <h1 class="title_mobile js-letter" style="transform: translateX(0%) translateZ(0px);">
                     Ціни та Контакти
                 </h1>
                 <p>Актуальний базовий прайс / 2021</p>
             </div>
-            <div class="col-sm-12 px-5 price-block services">
-                <div class="row text-grey">
-                    <div class="col-5 mobile-wedding-price text-right">
-                        <h4>Весілля</h4>
-                        <h5>300$</h5>
+            <div class="col-sm-12 price-block">
+                <div class="row justify-content-around">
+                    <div class="col-xs-6">
+                        <h5 class="mb-1">Стандарт</h5>
+                        <h5>6000 грн</h5>
                     </div>
-                    <div class="col-6 mobile-family-price text-left">
-                        <h4>Сімейна</h4>
-                        <h5>100$</h5>
+                    <div class="col-xs-6 text-right">
+                        <h6>- 6 годин зйомки</h6>
+                        <h6>- повна обробка усіх фото</h6>
+                        <h6>  (не менше 400)</h6>
+                        <h6>- термін готовності 1 - 2 місяці</h6>
+                        <h6>- ретуш великих портретів</h6>
+                        <h6>- знижка на loveStory 15%</h6>
+
                     </div>
                 </div>
-                <div class="row text-grey">
-                    <div class="col-5 mobile-story-price text-right pl-1">
-                        <h4>loveStory</h4>
-                        <h5>150$</h5>
+                <div class="row justify-content-around mt-3">
+                    <div class="col-xs-6">
+                        <h5 class="mb-1">Преміум</h5>
+                        <h5>8000 грн</h5>
                     </div>
-                    <div class="col-6 mobile-studio-price text-left">
-                        <h4>Студійна</h4>
-                        <h5>200$</h5>
+                    <div class="col-xs-6 text-right">
+                        <h6>- 8 годин зйомки</h6>
+                        <h6>- повна обробка усіх фото</h6>
+                        <h6>  (не менше 500)</h6>
+                        <h6>- термін готовності 1 - 2 місяці</h6>
+                        <h6>- ретуш великих портретів</h6>
+                        <h6>- знижка на loveStory 25%</h6>
+                    </div>
+                </div>
+                <div class="row justify-content-around mt-3">
+                    <div class="col-xs-6">
+                        <h5 class="mb-1">Повний день</h5>
+                        <h5>10500 грн</h5>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <h6>- 12 годин зйомки</h6>
+                        <h6>- повна обробка усіх фото</h6>
+                        <h6> (не менше 700)</h6>
+                        <h6>- термін готовності 1 - 2 місяці</h6>
+                        <h6>- ретуш великих портретів</h6>
+                        <h6>- знижка на loveStory 50%</h6>
+                    </div>
+                </div>
+                <div class="row justify-content-around mt-3">
+                    <div class="col-xs-6">
+                        <h5 class="mb-3">Індивідуальна</h5>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <h6>Умови та Прайс</h6>
+                        <h6> розглядаються в</h6>
+                        <h6> залежності від побажань</h6>
                     </div>
                 </div>
             </div>
@@ -103,7 +144,7 @@
                 <a href="tel:+380661906833" class="px-1">+380661906833</a>
                 <a href="tel:+380965087310" class="px-1">+380965087310</a>
             </div>
-            <div class="col-sm-12 text-center">
+            <div class="col-sm-12 text-center my-4">
                 <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-2x fa-facebook mr-2"></i></a>
                 <a href=""><i class="fa fa-2x fa-youtube mr-2"></i></a>
                 <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-2x fa-instagram mr-2"></i></a>
