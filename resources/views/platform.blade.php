@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta content="Свадебный и Семейный Фотограф Станислав Сысоев. Самые яркие воспоминания всегда с тобой! Ты в кадре!" name="description">
-    <meta content="свадебный, семейный, лавстори, love-story, фотограф, Станислав, Сысоев, Украина, Запорожье, моменты, фото, кадр, воспоминания,"
+    <meta content="Свадебный и Семейный Фотограф Станислав Сысоев. Самые яркие воспоминания всегда с тобой! Ты в кадре! Фотограф Запорожье" name="description">
+    <meta content="фотограф Запорожье, лучший фотограф, фотография, кращій фотограф, фотограф Запоріжжя, Станислав Сысоев, Станіслав Сисоєв, Запорожье фотограф,свадебный, семейный, лавстори, love-story, фотограф, Станислав, Сысоев, Украина, Запорожье, моменты, фото, кадр, воспоминания,"
           name="keywords">
     <meta content="{{ asset('images/favicon.png') }}" property="og:image">
     <meta content="Свадебный и Семейный фотограф Станислав Сысоев Запорожье" property="og:title">
     <meta content="website" property="og:type">
     <meta content="ru_RU" property="og:locale">
     <meta content="Свадебный и Семейный Фотограф Станислав Сысоев. Самые яркие воспоминания всегда с тобой! Ты в кадре!" property="og:description">
-    <meta content="Сысоев Станислав. Фотограф." property="og.site_name">
+    <meta content="Сысоев Станислав. Фотограф. Свадебная и семейная фотография." property="og.site_name">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo-stas.png">

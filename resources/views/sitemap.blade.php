@@ -3,27 +3,45 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://ana-konsalt.tk</loc>
-        <lastmod>2021-01-24-</lastmod>
+        <loc>http://sysoevphoto.com/</loc>
+        <lastmod>2021-02-21-</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     <url>
-        <loc>http://ana-konsalt.tk/#/services</loc>
-        <lastmod>2021-01-24-</lastmod>
+        <loc>http://sysoevphoto.com/services</loc>
+        <lastmod>2021-02-21-</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     <url>
-        <loc>http://ana-konsalt.tk/#/price</loc>
-        <lastmod>2021-01-24-</lastmod>
+        <loc>http://sysoevphoto.com/portfolio</loc>
+        <lastmod>2021-02-21-</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     <url>
-        <loc>http://ana-konsalt.tk/#/contacts</loc>
-        <lastmod>2021-01-24-</lastmod>
+        <loc>http://sysoevphoto.com/gallery</loc>
+        <lastmod>2021-02-21-</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://sysoevphoto.com/other-gallery</loc>
+        <lastmod>2021-02-21-</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://sysoevphoto.com/price</loc>
+        <lastmod>2021-02-21-</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://sysoevphoto.com/contacts</loc>
+        <lastmod>2021-02-21-</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 </urlset>
