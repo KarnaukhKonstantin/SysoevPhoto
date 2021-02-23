@@ -49,36 +49,4 @@ Vue.component('About-page', require('./components/pages/AboutMe.vue').default);
 const app = new Vue({
     el: '#app',
     router,
-
-    data: {
-        pages: [
-            '/',
-            '/services',
-            '/portfolio',
-            '/price',
-            '/contacts'
-        ],
-    },
-    methods: {
-        handleScroll: function (event) {
-            if (this.$route.path !== '/gallery' && this.$route.path !== '/other-gallery' && this.pages.includes(this.$route.path)) {
-                if (event.deltaY > 0) {
-                    this.start = this.start < 4 ? this.start + 1 : this.start = 0;
-                } else {
-                    this.start = this.start > 0 ? this.start - 1 : this.start = 4;
-                }
-                this.$router.push(this.pages[this.start]).catch(()=>{});
-            }
-        },
-        check() {
-            rumuslog.checkLog();
-        }
-    },
-    mounted() {
-        this.handleDebouncedScroll = debounce(this.handleScroll, 10000);
-        window.addEventListener('wheel', this.handleScroll);
-    },
-    created() {
-
-    }
 });
