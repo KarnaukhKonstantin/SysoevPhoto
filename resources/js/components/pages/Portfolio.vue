@@ -23,42 +23,62 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/family.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/family.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/lovestory.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/lovestory.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/wedding-as.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/wedding-as.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/wedding.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/wedding.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 px-1">
-                                <img src="assets/images/portfolio/wedding2.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/wedding2.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12 px-1">
-                                <img src="assets/images/portfolio/fon2.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/fon2.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                         </div>
                         <div class="row py-1">
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/pair.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/pair.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/kid.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/kid.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/sysoev_stan.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/sysoev_stan.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                             <div class="col-md-6 px-1">
-                                <img src="assets/images/portfolio/airport.jpg" class="img-fluid" width="100%">
+                                <router-link class="d-block" :to="{ name: 'other-gallery'}" tag="a">
+                                    <img src="assets/images/portfolio/airport.jpg" class="img-fluid" width="100%">
+                                </router-link>
                             </div>
                         </div>
                     </div>

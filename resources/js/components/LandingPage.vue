@@ -12,10 +12,10 @@
                             <img src="assets/images/sysoev-logo.png" class="img-thumbnail" width="100">
                         </div>
                         <div class="row social-sidebar">
-                            <a href="https://www.facebook.com/dchnmkn"><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-youtube"></i></a>
                             <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><i class="fa fa-instagram"></i></a>
-                            <a href="https://t.me/sysoevphoto"><i class="fa fa-telegram"></i></a>
+                            <a href="https://t.me/sysoevphoto" target="_blank"><i class="fa fa-telegram"></i></a>
+                            <a href="tel:+380661906833" target="_blank"><i class="fa fa-volume-control-phone"></i></a>
+                            <a href="tel:+380661906833" target="_blank"><i class="fa fa-phone"></i></a>
                         </div>
                     </div>
 
@@ -30,11 +30,11 @@
                                     <li class="line-main">Головна</li>
                                 </router-link>
                             </ul>
-                            <ul>
-                                <router-link class="d-block" :to="{ name: 'services'}" tag="a">
-                                    <li class="line-services">Послуги</li>
-                                </router-link>
-                            </ul>
+<!--                            <ul>-->
+<!--                                <router-link class="d-block" :to="{ name: 'services'}" tag="a">-->
+<!--                                    <li class="line-services">Послуги</li>-->
+<!--                                </router-link>-->
+<!--                            </ul>-->
                             <ul>
                                 <router-link class="d-block" :to="{ name: 'portfolio'}" tag="a">
                                     <li class="line-portfolio">Портфоліо</li>

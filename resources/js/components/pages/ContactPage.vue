@@ -7,10 +7,10 @@
                         ДЛЯ<br>ЗВ'ЯЗКУ
                     </h1>
                     <div class="business-title pt-3">
-                        <h6>0661906833</h6>
-                        <h6>@sysoevphoto</h6>
-                        <h6>https://t.me/sysoevphoto</h6>
-                        <h6>https://www.facebook.com/dchnmkn</h6>
+                        <a href="https://t.me/sysoevphoto" target="_blank"><h6><i class="fa fa-telegram"></i> https://t.me/sysoevphoto</h6></a>
+                        <a href="https://www.instagram.com/sysoevphoto/" target="_blank"><h6><i class="fa fa-instagram"></i> @sysoevphoto</h6></a>
+                        <a href="tel:+380661906833" target="_blank"><h6><i class="fa fa-volume-control-phone"></i> +380661906833 (Viber)</h6></a>
+                        <a href="tel:+380965087310" target="_blank"><h6><i class="fa fa-phone"></i> +380965087310</h6></a>
                     </div>
                 </div>
             </div>
