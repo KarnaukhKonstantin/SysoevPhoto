@@ -5,9 +5,9 @@
             <div class="row py-3 mx-0 gallery" v-if="photos.length > 0 || categoryPhotos.length > 0" @scroll="listScroll">
                 <div class="col-md-6" v-if="photos.length > 0">
                     <div class="row">
-                        <div class="col-md-6 d-block w-100 mx-auto my-2 text-center" v-for="photo in photos">
+                        <div class="col-md-6 d-block w-100 mx-auto my-2 text-center" v-for="(photo, index) in photos">
                             <img :src="photo.link" class="img-fluid" style="height: 250px; object-fit: contain"
-                                 @click="showFullSize(photo.link)">
+                                 @click="showFullSize(photo, index)">
                         </div>
                     </div>
                 </div>
@@ -33,14 +33,20 @@
                 </div>
             </div>
 
-            <div id="gallery" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div id="gallery" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" @keyup.left="prevPhoto()" @keyup.right="nextPhoto()">
                 <div class="modal-dialog modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-body mt-0 pt-1">
                             <div class="container-fluid px-0">
                                 <div class="row align-items-center">
                                     <div class="col-md-12 text-center">
-                                        <img :src="fullImageSource" class="img-fluid">
+                                        <img :src="fullImageSource" style="max-height: 100% !important;">
+                                        <button class="carousel-control-prev" type="button"
+                                                data-bs-slide="prev" @click="prevPhoto()">
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                                data-bs-slide="next" @click="nextPhoto()">
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -72,6 +78,7 @@
 export default {
     data () {
         return {
+            fullImageIndex: 0,
             fullImageSource: '',
             photos: [],
             categoryPhotos: [],
@@ -92,8 +99,9 @@ export default {
                 this.loadMore();
             }
         },
-        showFullSize(img) {
-            this.fullImageSource = img;
+        showFullSize(img, index) {
+            this.fullImageIndex = index;
+            this.fullImageSource = this.photos[index].link
             $('#gallery').modal('show');
         },
         showCategory(photoSession) {
@@ -124,6 +132,22 @@ export default {
         },
         onCancel() {
             console.log('User cancelled the loader.')
+        },
+        prevPhoto() {
+            if (this.fullImageIndex === 0) {
+                this.fullImageIndex = this.photos.length - 1;
+            } else {
+                this.fullImageIndex -= 1;
+            }
+            this.fullImageSource = this.photos[this.fullImageIndex].link;
+        },
+        nextPhoto() {
+            if (this.fullImageIndex === this.photos.length - 1) {
+                this.fullImageIndex = 0;
+            } else {
+                this.fullImageIndex += 1;
+            }
+            this.fullImageSource = this.photos[this.fullImageIndex].link;
         }
     },
     created() {

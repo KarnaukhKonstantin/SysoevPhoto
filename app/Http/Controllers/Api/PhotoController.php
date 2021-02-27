@@ -54,7 +54,10 @@ class PhotoController extends Controller
     public function getPhotos(Request $request)
     {
         $perPage = $request->perPage ?? 10;
+        $categoryPerPage = $request->perPage ? ($request->perPage / 4) : 2;
+
         $offset = $request->offset ?? 0;
+        $categoryOffset = $request->offset ? ($request->offset / 4) : 0;
 
         $count = Gallery::count();
 
@@ -69,8 +72,8 @@ class PhotoController extends Controller
             ->whereNotNull('photo_session_id')
             ->where('is_main_photo', true)
             ->orderBy('id', 'desc')
-            ->take($perPage)
-            ->offset($offset)
+            ->take($categoryPerPage)
+            ->offset($categoryOffset)
             ->with('session')
             ->get();
 
