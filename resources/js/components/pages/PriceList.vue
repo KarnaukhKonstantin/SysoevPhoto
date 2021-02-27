@@ -46,10 +46,12 @@
                     <div class="col-md-5 ml-1 py-2 pl-5 text-left studio-price prices">
                         <h1>Індивідуальна</h1>
                         <h6 class="mt-3">Умови та Прайс розглядаються в залежності від побажань</h6>
-                        <h6 class="mt-50">Потрібна підказка?</h6>
-                        <div class="row px-3">
-                            <a href="https://www.instagram.com/sysoevphoto/" target="_blank" class="mx-2"><i class="fa fa-2x fa-instagram"></i></a>
-                            <a href="https://t.me/sysoevphoto" target="_blank"><i class="fa fa-2x fa-telegram"></i></a>
+                        <div class="note">
+                            <h6 class="text-right px-2">Потрібна підказка?</h6>
+                            <div class="row px-4 justify-content-end">
+                                <a href="https://www.instagram.com/sysoevphoto/" target="_blank" class="mx-2"><i class="fa fa-2x fa-instagram"></i></a>
+                                <a href="https://t.me/sysoevphoto" target="_blank"><i class="fa fa-2x fa-telegram"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
